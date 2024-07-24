@@ -1,6 +1,5 @@
 "use client";
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import Alarm from "./Alarm";
 import ModalSetting from "./ModalSetting";
 import Navigation from "../components/Navigation";
 import Timer from "./Timer";
@@ -130,7 +129,6 @@ const Index: React.FC = () => {
             reset={reset}
           />
         </div>
-        <Alarm ref={alarmRef} />
         <ModalSetting
           openSetting={openSetting}
           setOpenSetting={setOpenSetting}
