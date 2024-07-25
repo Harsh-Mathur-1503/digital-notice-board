@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
 
 const TILCorner: React.FC = () => {
@@ -14,21 +14,21 @@ const TILCorner: React.FC = () => {
   };
 
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-100 to-indigo-200 shadow-md rounded-lg max-w-md mx-auto border border-gray-300">
-      <h2 className="text-3xl font-semibold mb-6 text-gray-900">Today I Learned</h2>
+    <div className="p-6 bg-gradient-to-br from-teal-50 via-teal-100 to-teal-200 shadow-xl w-full mx-auto">
+      <h2 className="text-4xl font-extrabold mb-6 text-teal-900">Today I Learned</h2>
       
       {/* Add New Entry */}
-      <div className="mb-4">
+      <div className="mb-6">
         <textarea
           value={newEntry}
           onChange={(e) => setNewEntry(e.target.value)}
-          placeholder="Write down something you learned today..."
-          className="p-4 border border-gray-300 rounded-lg w-full bg-white text-gray-900 placeholder-gray-500 resize-none"
+          placeholder="Share your daily learnings..."
+          className="p-4 rounded-lg w-full bg-white text-teal-900 placeholder-teal-500 resize-none shadow-md focus:outline-none focus:ring-2 focus:ring-teal-500"
           rows={4}
         />
         <button
           onClick={handleAddEntry}
-          className="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+          className="mt-4 bg-gradient-to-r from-teal-600 to-teal-500 text-white px-6 py-3 rounded-lg shadow-lg hover:from-teal-700 hover:to-teal-600 transition-transform transform hover:scale-105"
         >
           Add Entry
         </button>
@@ -37,9 +37,9 @@ const TILCorner: React.FC = () => {
       {/* Display Entries */}
       <ul className="space-y-4">
         {tilEntries.map((entry, index) => (
-          <li key={index} className="p-4 bg-white shadow-sm rounded-lg border border-gray-200">
-            <p className="text-sm text-gray-600 mb-2">{entry.date}</p>
-            <p className="text-gray-800">{entry.content}</p>
+          <li key={index} className="p-6 bg-white shadow-lg rounded-lg border border-teal-300 transition-transform transform hover:scale-105">
+            <p className="text-sm text-teal-500 mb-2">{entry.date}</p>
+            <p className="text-teal-800">{entry.content}</p>
           </li>
         ))}
       </ul>

@@ -113,7 +113,7 @@ const Index: React.FC = () => {
   }, [clockTicking, consumedSeconds, ticking]);
 
   return (
-    <div className="bg-gray-800 min-h-screen text-white font-inter flex flex-col">
+    <div className="bg-teal-50 min-h-screen text-gray-800 font-inter flex flex-col rounded-lg">
       <div className="max-w-3xl mx-auto p-4 flex-1">
         <Navigation setOpenSetting={setOpenSetting} />
         <div className="mt-4">

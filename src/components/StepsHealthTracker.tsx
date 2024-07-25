@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
 
 const StepsHealthTracker: React.FC = () => {
@@ -18,26 +18,28 @@ const StepsHealthTracker: React.FC = () => {
   };
 
   return (
-    <div className="p-6 bg-white shadow-md rounded-lg max-w-md mx-auto border border-gray-300">
-      <h2 className="text-3xl font-semibold mb-6 text-gray-900">Steps/Health Tracker</h2>
+    <div className="p-6 bg-teal-50 rounded-xl max-w-md mx-auto">
+      <h2 className="text-2xl font-bold mb-6 text-teal-900">Steps/Health Tracker</h2>
 
       {/* Current Steps Display */}
-      <div className="mb-4">
-        <p className="text-xl text-gray-700 mb-2">Total Steps: <span className="font-bold text-blue-600">{steps}</span></p>
+      <div className="mb-6">
+        <p className="text-xl text-teal-800 mb-2">
+          Total Steps: <span className="font-bold text-teal-600">{steps}</span>
+        </p>
       </div>
 
       {/* Add Steps Form */}
-      <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden">
+      <div className="flex items-center border border-teal-300 rounded-lg overflow-hidden bg-white">
         <input
           type="number"
           value={newSteps}
           onChange={(e) => setNewSteps(e.target.value)}
           placeholder="Enter steps"
-          className="p-3 w-full border-none outline-none bg-gray-100 text-gray-900 placeholder-gray-500"
+          className="p-3 w-full border-none outline-none text-teal-900 placeholder-teal-500 bg-white"
         />
         <button
           onClick={handleAddSteps}
-          className="bg-blue-600 text-white px-6 py-3 border-none cursor-pointer hover:bg-blue-700 transition-colors"
+          className="bg-teal-600 text-white px-6 py-3 rounded-r-lg font-semibold hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-400 transition-all"
         >
           Add
         </button>

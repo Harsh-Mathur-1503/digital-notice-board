@@ -8,13 +8,13 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ setOpenSetting }) => {
   return (
-    <nav className="pt-5 text-white flex justify-between w-11/12 mx-auto">
-      <div className="flex items-center gap-1 cursor-pointer">
-        <FiCommand className="text-sm" />
-        <h1>Daily Focus</h1>
+    <nav className="pt-5 text-teal-900 flex justify-between items-center w-11/12 mx-auto">
+      <div className="flex items-center gap-2 cursor-pointer">
+        <FiCommand className="text-teal-600 text-lg" />
+        <h1 className="text-teal-900 text-xl font-semibold">Productivity Hub</h1>
       </div>
       <FiSettings
-        className="text-2xl cursor-pointer"
+        className="text-teal-600 text-2xl cursor-pointer"
         onClick={() => setOpenSetting((value) => !value)}
       />
     </nav>

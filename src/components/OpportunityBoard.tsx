@@ -26,41 +26,41 @@ const OpportunityBoard: React.FC = () => {
   };
 
   return (
-    <div className="p-6 bg-gray-50 shadow-xl rounded-lg max-w-3xl mx-auto border border-gray-300">
-      <h2 className="text-4xl font-bold mb-6 text-gray-900">Opportunity Board</h2>
+    <div className="p-6 bg-teal-50 rounded-xl max-w-4xl mx-auto">
+      <h2 className="text-3xl font-bold mb-6 text-teal-900">Opportunity Board</h2>
       {/* Opportunity List */}
       <div className="space-y-4">
         {opportunities.map(({ id, title, description }) => (
-          <div key={id} className="p-6 bg-white shadow-md rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-2">{title}</h3>
-            <p className="text-gray-600">{description}</p>
+          <div key={id} className="p-6 bg-white rounded-lg 0 hover:bg-teal-100 transition-colors">
+            <h3 className="text-xl font-semibold text-teal-800 mb-2">{title}</h3>
+            <p className="text-teal-700">{description}</p>
             <div className="mt-4 flex justify-end">
-              <button className="text-blue-600 hover:underline">View Details</button>
+              <button className="text-teal-600 hover:underline font-semibold">View Details</button>
             </div>
           </div>
         ))}
       </div>
       {/* Add Opportunity Form */}
-      <div className="mb-8 bg-white shadow-md rounded-lg p-6 border border-gray-200">
-        <h3 className="text-2xl font-semibold text-gray-800 mb-4">Add New Opportunity</h3>
+      <div className="mt-8 bg-white shadow-md rounded-lg p-6 border border-teal-900">
+        <h3 className="text-xl font-semibold text-teal-800 mb-4">Add New Opportunity</h3>
         <div className="mb-4">
           <input
             type="text"
             value={newTitle}
             onChange={(e) => setNewTitle(e.target.value)}
             placeholder="Opportunity Title"
-            className="p-4 border border-gray-300 rounded-lg w-full mb-4 text-gray-800 placeholder-gray-500"
+            className="p-4 border border-teal-800 rounded-lg w-full mb-4 text-teal-900 placeholder-teal-500"
           />
           <textarea
             value={newDescription}
             onChange={(e) => setNewDescription(e.target.value)}
             placeholder="Opportunity Description"
-            className="p-4 border border-gray-300 rounded-lg w-full mb-4 text-gray-800 placeholder-gray-500"
+            className="p-4 border border-teal-800 rounded-lg w-full mb-4 text-teal-900 placeholder-teal-500"
             rows={4}
           />
           <button
             onClick={handleAddOpportunity}
-            className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-3 rounded-lg shadow-md hover:from-blue-600 hover:to-indigo-700 transition-all"
+            className="bg-teal-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-teal-700 transition-all font-semibold"
           >
             Add Opportunity
           </button>

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
 
 const initialPollOptions = [
@@ -21,20 +21,20 @@ const Poll: React.FC = () => {
   };
 
   return (
-    <div className="p-6 bg-white shadow-lg rounded-lg max-w-md mx-auto border border-gray-200">
-      <h2 className="text-3xl font-semibold mb-6 text-gray-900 border-b border-gray-300 pb-2">Poll</h2>
+    <div className="p-6 bg-teal-50 rounded-xl max-w-md mx-auto">
+      <h2 className="text-2xl font-bold mb-6 text-teal-900 border-b border-teal-300 pb-2">Poll</h2>
       <ul className="space-y-4">
         {pollOptions.map(({ id, option, votes }) => (
-          <li key={id} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg border border-gray-200 hover:bg-gray-100 transition-colors">
-            <span className="text-lg font-medium text-gray-800">{option}</span>
+          <li key={id} className="flex items-center justify-between p-4 bg-teal-50 rounded-lg hover:bg-teal-100 transition-colors">
+            <span className="text-lg font-medium text-teal-800">{option}</span>
             <div className="flex items-center space-x-4">
               <button
                 onClick={() => handleVote(id)}
-                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                className="bg-teal-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-400 transition-all"
               >
                 Vote
               </button>
-              <span className="text-sm text-gray-600">{votes} votes</span>
+              <span className="text-sm text-teal-600">{votes} votes</span>
             </div>
           </li>
         ))}

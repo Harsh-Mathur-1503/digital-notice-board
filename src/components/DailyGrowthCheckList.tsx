@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
 
 const DailyGrowthChecklist: React.FC = () => {
@@ -25,20 +25,25 @@ const DailyGrowthChecklist: React.FC = () => {
   };
 
   return (
-    <div className="p-6 bg-white shadow-md rounded-lg max-w-md mx-auto border border-gray-300">
-      <h2 className="text-3xl font-semibold mb-6 text-gray-900">Daily Growth Checklist</h2>
+    <div className="p-6 bg-teal-50 rounded-2xl max-w-md mx-auto">
+      <h2 className="text-3xl font-semibold mb-6 text-teal-900">Daily Growth Checklist</h2>
 
       {/* Task List */}
-      <ul className="space-y-3">
+      <ul className="space-y-4">
         {tasks.map(task => (
-          <li key={task} className="flex items-center p-3 bg-gray-50 rounded-lg border border-gray-200 hover:bg-gray-100 transition-colors">
+          <li
+            key={task}
+            className="flex items-center p-4 bg-teal-50 text-teal-900 rounded-lg border border-teal-50 transition-transform hover:scale-105 hover:bg-teal-200"
+          >
             <input
               type="checkbox"
               checked={completedTasks.includes(task)}
               onChange={() => handleCheckboxChange(task)}
-              className="mr-3"
+              className="mr-4 h-5 w-5 accent-teal-500"
             />
-            <span className={`flex-1 ${completedTasks.includes(task) ? 'line-through text-gray-500' : 'text-gray-800'}`}>
+            <span
+              className={`flex-1 text-lg ${completedTasks.includes(task) ? 'line-through text-gray-500' : 'text-teal-900'}`}
+            >
               {task}
             </span>
           </li>
@@ -47,17 +52,17 @@ const DailyGrowthChecklist: React.FC = () => {
       
       {/* Add Task Form */}
       <div className="mt-6">
-        <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden">
+        <div className="flex items-center border border-teal-300 rounded-lg overflow-hidden bg-white shadow-md">
           <input
             type="text"
             value={newTask}
             onChange={(e) => setNewTask(e.target.value)}
             placeholder="Add a new task"
-            className="p-3 w-full border-none outline-none bg-gray-100 text-gray-900 placeholder-gray-500"
+            className="p-3 w-full border-none outline-none text-teal-900 placeholder-teal-500"
           />
           <button
             onClick={handleAddTask}
-            className="bg-blue-600 text-white px-6 py-3 border-none cursor-pointer hover:bg-blue-700 transition-colors"
+            className="bg-teal-500 text-white px-6 py-3 rounded-r-lg font-semibold hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400 transition-all"
           >
             Add
           </button>

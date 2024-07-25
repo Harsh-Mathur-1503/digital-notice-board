@@ -2,9 +2,8 @@ import React from 'react';
 
 const SpotifyPlaylist: React.FC = () => {
   return (
-    <div className="p-4">
+    <div className="p-4 bg-teal-50 rounded-lg">
       <iframe
-        style={{ borderRadius: '12px' }}
         src="https://open.spotify.com/embed/playlist/2K25njMCNAPhHwGuX97TNt?utm_source=generator"
         width="100%"
         height="352"
