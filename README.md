@@ -12,21 +12,11 @@ This Chrome extension transforms your browser's homepage into a versatile digita
   - Book + Quote
   - Daily Growth Checklist
   - Steps/Health Tracker
-
-- **Optional Widgets:**
-  - Google Spreadsheet
-  - Music Player
   - Poll
-  - Issue Tracker
   - Announcements
   - Opportunity Board
-  - Generic Leaderboard
   - TIL Corner
-  - Google Calendar Day View
-  - Google Meet
   - Google Keep
-  - ChatGPT/Perplexity Chat Box
-  - Specific Notion Page
 
 ## Getting Started
 
